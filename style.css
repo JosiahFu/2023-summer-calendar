@@ -1,0 +1,99 @@
+:root {
+    --background-color: white;
+    --text-color: white;
+    --accent-color: #1c71d8;
+    --faded-color: #5b5b5b;
+    --shadow-color: black;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 5px;
+    padding: 20px;
+}
+
+.date,
+.spacer {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.passed.animate {
+    animation: pass 3s ease forwards;
+}
+
+.passed {
+    background-color: var(--faded-color);
+}
+
+.spacer {
+    background-color: transparent;
+}
+
+/* input[type=color] {
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+} */
+
+@keyframes pass {
+    20% {
+        transform: scale(2);
+        background-color: var(--accent-color);
+        box-shadow: var(--shadow-color) 0px 0px 10px;
+    }
+
+    35% {
+        transform: scale(2);
+        background-color: var(--accent-color);
+    }
+
+    50% {
+        transform: scale(2.2);
+        background-color: white;
+    }
+
+    65% {
+        transform: scale(2);
+        background-color: var(--faded-color);
+    }
+
+    80% {
+        transform: scale(2);
+        background-color: var(--faded-color);
+        box-shadow: var(--shadow-color) 0px 0px 10px;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: var(--faded-color);
+        box-shadow: var(--shadow-color) 0px 0px 0px;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #181a1b;
+        --accent-color: #165aad;
+        --faded-color: #454a4d;
+    }
+}
