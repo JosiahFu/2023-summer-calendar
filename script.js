@@ -1,7 +1,7 @@
-import { h, Component, render } from 'https://esm.sh/preact';
-import { useEffect, useState, useRef, useCallback } from 'https://esm.sh/preact/hooks';
-import htm from 'https://esm.sh/htm';
-import 'https://esm.sh/preact/debug';
+import { h, Component, render } from 'https://esm.sh/preact@10.15.1';
+import { useEffect, useState, useRef, useCallback } from 'https://esm.sh/preact@10.15.1/hooks';
+import htm from 'https://esm.sh/htm@3.1.1';
+import 'https://esm.sh/preact@10.15.1/debug';
 
 // Initialize htm with Preact
 const html = htm.bind(h);
